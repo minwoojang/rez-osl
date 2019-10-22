@@ -1,3 +1,4 @@
-# rez-openshadinglanguage
+rez-osl
+===
 
-Rez build configuration for OpenColorIO.
+Rez build configuration for OpenShadingLanguage.
