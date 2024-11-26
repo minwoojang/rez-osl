@@ -20,6 +20,10 @@ echo -e "[CONFIGURE][ARGS] BUILD PATH: ${BUILD_PATH}"
 echo -e "[CONFIGURE][ARGS] INSTALL PATH: ${INSTALL_PATH}"
 echo -e "[CONFIGURE][ARGS] OSL VERSION: ${OSL_VERSION}"
 
+echo $REZ_PUGIXML_ROOT
+echo $REZ_PUGIXML_ROOT
+echo $REZ_PUGIXML_ROOT
+
 # We check if the arguments variables we need are correctly set.
 # If not, we abort the process.
 if [[ -z ${EXTRACT_PATH} || -z ${BUILD_PATH} || -z ${INSTALL_PATH} || -z ${OSL_VERSION} ]]; then
@@ -51,16 +55,19 @@ cmake \
     -DUSE_FAST_MATH=ON \
     -DUSE_LLVM_BITCODE=ON \
     -DUSE_OPTIX=OFF \
-    -DUSE_PARTIO=ON \
+    -DUSE_PARTIO=OFF \
     -DUSE_QT=OFF \
     -DBOOST_ROOT=${REZ_BOOST_ROOT} \
     -DILMBASE_ROOT_DIR=${REZ_ILMBASE_ROOT} \
     -DLLVM_DIRECTORY=${REZ_LLVM_ROOT} \
     -DOPENEXR_ROOT_DIR=${REZ_OPENEXR_ROOT} \
     -DOPENIMAGEIO_ROOT_DIR=${REZ_OIIO_ROOT} \
-    -DPARTIO_HOME=${REZ_PARTIO_ROOT} \
     -DPUGIXML_HOME=${REZ_PUGIXML_ROOT} \
     -DZLIB_ROOT=${REZ_ZLIB_ROOT}
+
+
+# -DPARTIO_HOME=${REZ_PARTIO_ROOT} \
+
 
 echo -e "\n"
 echo -e "[CONFIGURE] Finished configuring OSL-${OSL_VERSION}!"

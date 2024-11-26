@@ -1,6 +1,6 @@
 name = "osl"
 
-version = "1.10.7"
+version = "1.13.11.0"
 
 authors = [
     "Sony Pictures Imageworks"
@@ -13,22 +13,22 @@ description = \
     """
 
 requires = [
-    "bison-3+",
-    "boost-1.55+",
-    "cmake-3+",
-    "flex-2+",
+    "bison",
+    "boost",
+    "cmake",
+    "flex",
     "gcc-6+",
     "ilmbase-2.2+<2.4",
     "llvm-5+",
-    "oiio-1.8.5+",
-    "openexr-2.2+<2.4",
+    "oiio",
+    "openexr-2",
     "partio-1+",
     "png-1.6+",
     "pugixml-1+",
 ]
 
 variants = [
-    ["platform-linux"]
+    ["platform-linux","arch-x86_64"]
 ]
 
 tools = [
